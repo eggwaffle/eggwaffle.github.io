@@ -1,37 +1,34 @@
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring';
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import Date from '../../components/date'
+import { getAllProjectIds, getProjectData } from '../../lib/projects'
 import type { ReactElement } from 'react'
 import Layout from '../../components/layout'
 import utilStyles from '../../styles/utils.module.sass'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { HtmlCompiler } from '../../lib/htmlCompiler'
 
-interface postProps {
-  postData: {
+interface projectProps {
+  projectData: {
     title: string
-    date: string
     contentHtml: string
   }
 }
 
 export default function Page({
-  postData
- }: postProps) {
+  projectData
+ }: projectProps) {
   // Render the page
   return (
     <div>
       <Head>
-        <title>{postData.title}</title>
+        <title>{projectData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1 className={utilStyles.headingXl}>{projectData.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
         </div>
         <div>
-          {HtmlCompiler(postData.contentHtml)}
+          {HtmlCompiler(projectData.contentHtml)}
         </div>
       </article>
     </div>
@@ -48,7 +45,7 @@ Page.getLayout = function getLayout(page: ReactElement) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Return a list of possible value for id
-  const paths = getAllPostIds()
+  const paths = getAllProjectIds()
   return {
     paths,
     fallback: false
@@ -60,10 +57,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
   // `params.id` from getStaticProps({ params }) know the key is named `id`
   // based on the value from the file name
   const params = context.params!   // ! is a non-null assertion
-  const postData = await getPostData(params.id as string)
+  const projectData = await getProjectData(params.id as string)
   return {
     props: {
-      postData
+      projectData
     }
   }
 }

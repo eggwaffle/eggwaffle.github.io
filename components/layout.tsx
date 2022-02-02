@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './layout.module.sass'
 import utilStyles from '../styles/utils.module.sass'
 import Link from 'next/link'
+import Footer from './footer'
 
 const name = 'Egg Waffle'
 export const siteTitle = 'My Blog'
@@ -50,7 +51,7 @@ export default function Layout({
               <a>
                 <Image
                   priority
-                  src="images/profile.png"
+                  src="/images/profile.png"
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
@@ -74,19 +75,7 @@ export default function Layout({
           </Link>
         </div>
       )}
-      <footer className={styles.footer}>
-        <div>
-        created by <b>
-          <a
-            href="https://github.com/eggwaffle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            eggwaffle
-          </a>
-        </b> - devChallenges.io
-        </div>
-      </footer>
+      <Footer  />
     </div>
   )
 }
