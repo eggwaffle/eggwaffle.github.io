@@ -18,13 +18,18 @@ export default function Layout({
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Egg Waffle is a self-motivated developer, who is willing to learn and create outstanding web applications."
         />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/profile.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffdd55" />
+        <meta name="msapplication-TileColor" content="#fff6c4" />
+        <meta name="theme-color" content="#fff6c4" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
