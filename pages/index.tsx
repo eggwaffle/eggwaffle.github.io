@@ -2,6 +2,7 @@ import Date from '../components/date'
 import Head from 'next/head'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
+import ReactMarkdown from 'react-markdown'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.sass'
 import { getSortedPostsData } from '../lib/posts'
@@ -17,6 +18,7 @@ export default function Page( {
     date: string
     title: string
     id: string
+    excerpt: string
   }[],
   allProjectsData: {
     title: string
@@ -40,11 +42,12 @@ export default function Page( {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, excerpt}) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
+              <div>{excerpt}</div>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
@@ -62,11 +65,9 @@ export default function Page( {
                 <a>{title}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
                 {tags.map(tag => (
-                  <li key={tag}>{tag}</li>
+                  <small key={tag} className={utilStyles.lightText}>{tag}</small>
                 ))}
-              </small>
             </li>
           ))}
         </ul>

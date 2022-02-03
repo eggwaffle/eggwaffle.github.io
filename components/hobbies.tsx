@@ -3,7 +3,7 @@ import utilStyles from '../styles/utils.module.sass'
 import styles from './profile.module.sass'
 
 const name = 'Egg Waffle'
-export default function profile() {
+export default function hobbies() {
   return (
     <div className={utilStyles.card}>
       <div className={styles.profileContainer}>
@@ -49,7 +49,7 @@ export default function profile() {
             </div>
           </div>
           <p>
-            Self-motivated developer, who is willing to learn and create outstanding web applications.
+            Self-motivated developer, who is willing to learn and create outstanding UI applications.
           </p>
         </div>
       </div>

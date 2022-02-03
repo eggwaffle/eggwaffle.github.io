@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Footer from './footer'
 
 const name = 'Egg Waffle'
-export const siteTitle = 'My Blog'
+export const siteTitle = 'Egg Waffle'
 
 export default function Layout({
   children,
@@ -21,7 +21,7 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Egg Waffle is a self-motivated developer, who is willing to learn and create outstanding web applications."
         />
         <meta
           property="og:image"
