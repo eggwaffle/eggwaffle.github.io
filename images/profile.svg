@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55.827mm" height="56.02mm" version="1.1" viewBox="0 0 55.827 56.02" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(12.568 101.73)">
+  <path d="m-146.84-4.3604h338.67v190.5h-338.67z" fill="#fff"/>
+ </g>
+ <g transform="translate(-134.28 97.367)">
+  <g transform="matrix(.96088 0 0 1.1408 -69.164 -7.4385)">
+   <g transform="translate(35.983,-116.15)">
+    <ellipse cx="204.79" cy="61.876" rx="29.05" ry="24.552" fill="#fd5"/>
+    <rect transform="matrix(1 0 -.25506 .96692 0 0)" x="215.79" y="59.674" width="12.924" height="9.8866" ry="0" fill="#fd5"/>
+    <g fill="#fc0">
+     <rect x="185.82" y="54.324" width="37.921" height="2.2718" ry="1.1359"/>
+     <rect transform="rotate(15)" x="204.4" y="-6.3622" width="2.6595" height="32.446" ry="1.2854"/>
+     <rect transform="rotate(15)" x="221.02" y="-10.524" width="2.6595" height="32.446" ry="1.2854"/>
+     <rect x="184.51" y="66.983" width="38.236" height="2.2718" ry="1.1359"/>
+    </g>
+    <g fill="#fff6d5">
+     <rect x="185.65" y="53.697" width="38.521" height="2.3972" ry="1.1986"/>
+     <rect transform="rotate(15)" x="203.62" y="-7.8139" width="2.8063" height="34.237" ry="1.3564"/>
+     <rect transform="rotate(15)" x="220.34" y="-12.293" width="2.8063" height="34.237" ry="1.3564"/>
+     <rect x="184.59" y="66.397" width="38.521" height="2.3972" ry="1.1986"/>
+    </g>
+    <rect x="222.3" y="67.668" width=".15201" height=".011693" rx=".89297" ry=".011693" fill="#fc0"/>
+   </g>
+  </g>
+ </g>
+</svg>
