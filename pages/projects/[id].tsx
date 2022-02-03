@@ -5,6 +5,7 @@ import type { ReactElement } from 'react'
 import Layout from '../../components/layout'
 import utilStyles from '../../styles/utils.module.sass'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import ReactMarkdown from 'react-markdown'
 import { HtmlCompiler } from '../../lib/helperFunctions'
 
 interface projectProps {

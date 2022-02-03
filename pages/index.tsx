@@ -47,7 +47,7 @@ export default function Page( {
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
-              <div>{excerpt}</div>
+              <ReactMarkdown>{excerpt}</ReactMarkdown>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
@@ -75,9 +75,7 @@ export default function Page( {
     </div>
   )
 }
-/* {tags.map(tag => {
-                  <li key={tag}>{tag}</li>
-                })} */
+
 Page.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout home>
