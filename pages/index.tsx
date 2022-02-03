@@ -10,6 +10,7 @@ import { getSortedProjectsData } from '../lib/projects'
 import { GetStaticProps } from 'next'
 import Profile from '../components/profile'
 import BlogCard from '../components/blogCard'
+import ProjectCard from '../components/ProjectCard'
 
 export default function Page( {
   allPostsData,
@@ -25,9 +26,9 @@ export default function Page( {
   allProjectsData: {
     title: string
     id: string
-    tags: [
-      tag: string
-    ]
+    tags: string[]
+    coverImage: string
+    excerpt: string
   }[]
 }) {
   return (
@@ -36,7 +37,7 @@ export default function Page( {
         <title>{siteTitle}</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h3 className={utilStyles.card}>Blog</h3>
+        <h3 className={utilStyles.card}>Blog ({allPostsData.length})</h3>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, title, date, coverImage, excerpt}) => (
             <BlogCard
@@ -51,18 +52,17 @@ export default function Page( {
         </ul>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Projects</h2>
+        <h3 className={utilStyles.card}>Projects ({allProjectsData.length})</h3>
         <ul className={utilStyles.list}>
-          {allProjectsData.map(({ id, title, tags }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/projects/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-                {tags.map(tag => (
-                  <small key={tag} className={utilStyles.lightText}>{tag}</small>
-                ))}
-            </li>
+          {allProjectsData.map(({ id, title, tags, coverImage, excerpt }) => (
+            <ProjectCard
+            key={id}
+            id={id}
+            title={title}
+            tags={tags}
+            coverImage={coverImage}
+            excerpt={excerpt}
+          />
           ))}
         </ul>
       </section>

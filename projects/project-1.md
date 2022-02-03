@@ -1,29 +1,34 @@
 ---
-title: 'Project 1'
+title: 'My Gallery'
 order: '1'
 tags: ['html', 'css']
-coverImage: 'https://raw.githubusercontent.com/eggwaffle/404-Not-Found/main/screenshot.png'
+coverImage: '/images/my-gallery.png'
 ---
 
-yarn create next-app nextjs-blog
+Challenge: Create a recipe page following the design. The page should be responsive.
 
---use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+![screenshot](/images/my-gallery.png)
 
-yarn dev
-yarn build
-yarn start
+- Demo: https://responsive-web-dev-challenges.web.app/recipepage/
 
-# TailwindCSS and SASS
-yarn add tailwindcss postcss-preset-env postcss-flexbugs-fixes
+### Built With
 
-In root folder, create postcss.config.js and tailwind.config.js
-yarn add sass
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-# Typescript
-To get started, create an empty tsconfig.json file in the root of your project
+- [HTML](https://html.spec.whatwg.org/)
+- [CSS](https://www.w3.org/TR/CSS/)
 
-If you’re using npm
-npm install --save-dev typescript @types/react @types/node
+## Features
 
-If you’re using Yarn
-yarn add --dev typescript @types/react @types/node
+<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I) was to build an application to complete the given user stories.
+
+
+## Acknowledgements
+
+<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
+
+- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
+- [W3Schools](https://www.w3schools.com/)
+- [Marked - a markdown parser](https://github.com/chjj/marked)
