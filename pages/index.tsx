@@ -9,6 +9,7 @@ import { getSortedPostsData } from '../lib/posts'
 import { getSortedProjectsData } from '../lib/projects'
 import { GetStaticProps } from 'next'
 import Profile from '../components/profile'
+import BlogCard from '../components/blogCard'
 
 export default function Page( {
   allPostsData,
@@ -18,6 +19,7 @@ export default function Page( {
     date: string
     title: string
     id: string
+    coverImage: string
     excerpt: string
   }[],
   allProjectsData: {
@@ -33,26 +35,18 @@ export default function Page( {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>
-          (This website is built powered by{' '}
-          <a href="https://nextjs.org/learn">Next.js</a>.)
-        </p>
-      </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h3 className={utilStyles.card}>Blog</h3>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, excerpt}) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <ReactMarkdown>{excerpt}</ReactMarkdown>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+          {allPostsData.map(({ id, title, date, coverImage, excerpt}) => (
+            <BlogCard
+              key={id}
+              id={id}
+              title={title}
+              date={date}
+              coverImage={coverImage}
+              excerpt={excerpt}
+            />
           ))}
         </ul>
       </section>

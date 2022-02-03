@@ -2,6 +2,7 @@
 title: 'Project 1'
 order: '1'
 tags: ['html', 'css']
+coverImage: 'https://raw.githubusercontent.com/eggwaffle/404-Not-Found/main/screenshot.png'
 ---
 
 yarn create next-app nextjs-blog

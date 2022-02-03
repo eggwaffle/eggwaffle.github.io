@@ -23,6 +23,8 @@ export default function Layout({
           name="description"
           content="Egg Waffle is a self-motivated developer, who is willing to learn and create outstanding web applications."
         />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/profile.svg" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(

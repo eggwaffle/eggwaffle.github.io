@@ -12,7 +12,14 @@ export default function footer() {
         >
           eggwaffle
         </a>
-      </b> - devChallenges.io
+      </b> -{' '}
+      <a
+          href="https://devchallenges.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          devChallenges.io
+        </a>
       </div>
     </footer>
   )

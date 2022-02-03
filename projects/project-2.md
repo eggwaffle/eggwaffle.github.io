@@ -1,7 +1,8 @@
 ---
 title: 'Project 2'
 order: '2'
-tags: ['react']
+tags: ['html', 'css']
+coverImage: 'https://raw.githubusercontent.com/eggwaffle/My-Team-Page/main/screenshot.png'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
