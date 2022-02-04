@@ -43,11 +43,11 @@ export default function Layout({
           <></>
         ) : (
           <>
-            <Link href="/">
+            <Link href="https://eggwaffle.github.io">
               <a>
                 <Image
                   priority
-                  src="/images/profile.svg"
+                  src="https://eggwaffle.github.io/images/profile.svg"
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
