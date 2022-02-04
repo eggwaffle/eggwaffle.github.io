@@ -46,7 +46,7 @@ Challenge: Create my own portfolio.
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [Sass](https://sass-lang.com/)
-- [Tailwind](https://tailwindcss.com/)https://nextjs.org/
+- [Tailwind](https://tailwindcss.com/)
 
 ## Features
 
