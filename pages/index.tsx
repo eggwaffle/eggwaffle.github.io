@@ -10,7 +10,7 @@ import { getSortedProjectsData } from '../lib/projects'
 import { GetStaticProps } from 'next'
 import Profile from '../components/profile'
 import BlogCard from '../components/blogCard'
-import ProjectCard from '../components/ProjectCard'
+import ProjectCard from '../components/projectCard'
 
 export default function Page( {
   allPostsData,
