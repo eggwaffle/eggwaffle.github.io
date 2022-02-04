@@ -1,58 +1,30 @@
 import Image from 'next/image'
 import utilStyles from '../styles/utils.module.sass'
-import styles from './profile.module.sass'
+import styles from './hobbies.module.sass'
+import Hobby from './hobby'
 
-const name = 'Egg Waffle'
-export default function hobbies() {
+export default function Hobbies() {
   return (
-    <div className={utilStyles.card}>
-      <div className={styles.profileContainer}>
-        <Image
-          priority
-          src="/images/profile.svg"
-          className={styles.profilePic}
-          height={144}
-          width={144}
-          alt={name}
-        />
-        <div>
-          <div className={styles.detailsContainer}>
-            <div className={styles.nameContainer}>
-              <h2>{name}</h2>
-              <small>Front-end developer</small>
-            </div>
-            <div>
-              <div className={styles.contactItem}>
-                <a href="https://github.com/eggwaffle">
-                  <Image
-                    priority
-                    src="/images/github.svg"
-                    height={32}
-                    width={32}
-                    alt="GitHub"
-                  />
-                  <p>eggwaffle</p>
-                </a>
-              </div>
-              <div className={styles.contactItem}>
-                <a href="https://devchallenges.io/portfolio/eggwaffle">
-                  <Image
-                    priority
-                    src="/images/devchallenges.png"
-                    height={32}
-                    width={32}
-                    alt="devChallenges"
-                  />
-                  <p>eggwaffle</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <p>
-            Self-motivated developer, who is willing to learn and create outstanding UI applications.
-          </p>
-        </div>
-      </div>
+    <div className={`${utilStyles.card}`}>
+      <h3>Hobbies</h3>
+      <Hobby
+        hobby="Gaming"
+        description="My favourite genres are RPG, simulation and strategy"
+        src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+        alt="A gamepad"
+      />
+      <Hobby
+        hobby="Swimming"
+        description="I can swim 50m non-stop"
+        src="https://images.unsplash.com/photo-1591285713698-598d587de63e"
+        alt="A swimming pool"
+      />
+      <Hobby
+        hobby="Reading"
+        description="I read pretty fast"
+        src="https://images.unsplash.com/photo-1491309055486-24ae511c15c7"
+        alt="Reading a book"
+      />
     </div>
   )
 }

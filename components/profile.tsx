@@ -7,15 +7,17 @@ export default function profile() {
   return (
     <div className={utilStyles.card}>
       <div className={styles.profileContainer}>
-        <Image
-          priority
-          src="/images/profile.svg"
-          className={styles.profilePic}
-          height={144}
-          width={144}
-          alt={name}
-        />
-        <div>
+        <div className={styles.profilePicContainer}>
+          <Image
+            priority
+            src="/images/profile.svg"
+            className={styles.profilePic}
+            height={144}
+            width={144}
+            alt={name}
+          />
+        </div>
+        <div className={styles.profileInfoContainer}>
           <div className={styles.detailsContainer}>
             <div className={styles.nameContainer}>
               <h2>{name}</h2>

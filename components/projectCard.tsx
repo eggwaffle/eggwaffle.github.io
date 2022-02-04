@@ -20,16 +20,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   excerpt
 }) => {
   return (
-    <div className={`${utilStyles.card} ${utilStyles.PostCard}`} key={id}>
+    <div className={`${utilStyles.card} ${utilStyles.postCard}`} key={id}>
       <div className={styles.ProjectImageContainer}>
         <Image
             priority
             src={coverImage}
-            className={utilStyles.imageFrame}
-            height={144}
-            width={144}
-            layout="responsive"
+            className={styles.projectPic}
+            height={800}
+            width={800}
             alt={title}
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM0rgcAAOsAtGe4os0AAAAASUVORK5CYII="
+            placeholder="blur"
           />
       </div>
       <div className={styles.ProjectContainer}>

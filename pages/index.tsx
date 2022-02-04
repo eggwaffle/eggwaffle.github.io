@@ -2,13 +2,13 @@ import Date from '../components/date'
 import Head from 'next/head'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
-import ReactMarkdown from 'react-markdown'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.sass'
 import { getSortedPostsData } from '../lib/posts'
 import { getSortedProjectsData } from '../lib/projects'
 import { GetStaticProps } from 'next'
 import Profile from '../components/profile'
+import Hobbies from '../components/hobbies'
 import BlogCard from '../components/blogCard'
 import ProjectCard from '../components/projectCard'
 
@@ -36,6 +36,8 @@ export default function Page( {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <section>
+      </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h3 className={utilStyles.card}>Blog ({allPostsData.length})</h3>
         <ul className={utilStyles.list}>
@@ -74,7 +76,10 @@ Page.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout home>
       <Profile />
-      {page}
+      <div className={utilStyles.layout}>
+        <Hobbies />
+        {page}
+      </div>
     </Layout>
   )
 }
