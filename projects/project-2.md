@@ -2,7 +2,7 @@
 title: 'Random quote generator'
 order: '2'
 tags: ['#react', '#Typescript']
-coverImage: '/images/quote-generator.png'
+coverImage: 'https://eggwaffle.github.io/images/quote-generator.png'
 ---
 
 Challenge: Create a quote generator app [following given designs](https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8).

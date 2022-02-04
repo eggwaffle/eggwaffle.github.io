@@ -22,11 +22,11 @@ export default function Layout({
           name="description"
           content="Egg Waffle is a self-motivated developer, who is willing to learn and create outstanding web applications."
         />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffdd55" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://eggwaffle.github.io/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://eggwaffle.github.io/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://eggwaffle.github.io/favicon-16x16.png" />
+        <link rel="manifest" href="https://eggwaffle.github.io/site.webmanifest" />
+        <link rel="mask-icon" href="https://eggwaffle.github.io/safari-pinned-tab.svg" color="#ffdd55" />
         <meta name="msapplication-TileColor" content="#fff6c4" />
         <meta name="theme-color" content="#fff6c4" />
         <meta

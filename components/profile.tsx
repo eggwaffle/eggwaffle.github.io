@@ -10,7 +10,7 @@ export default function profile() {
         <div className={styles.profilePicContainer}>
           <Image
             priority
-            src="/images/profile.svg"
+            src="https://eggwaffle.github.io/images/profile.svg"
             className={styles.profilePic}
             height={144}
             width={144}
@@ -28,7 +28,7 @@ export default function profile() {
                 <a href="https://github.com/eggwaffle">
                   <Image
                     priority
-                    src="/images/github.svg"
+                    src="https://eggwaffle.github.io/images/github.svg"
                     height={32}
                     width={32}
                     alt="GitHub"
@@ -40,7 +40,7 @@ export default function profile() {
                 <a href="https://devchallenges.io/portfolio/eggwaffle">
                   <Image
                     priority
-                    src="/images/devchallenges.png"
+                    src="https://eggwaffle.github.io/images/devchallenges.png"
                     height={32}
                     width={32}
                     alt="devChallenges"
