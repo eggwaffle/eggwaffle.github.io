@@ -6,12 +6,11 @@ import Layout from '../../components/layout'
 import utilStyles from '../../styles/utils.module.sass'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import ReactMarkdown from 'react-markdown'
-import { HtmlCompiler } from '../../lib/helperFunctions'
 
 interface projectProps {
   projectData: {
     title: string
-    contentHtml: string
+    content: string
   }
 }
 
@@ -20,7 +19,7 @@ export default function Page({
  }: projectProps) {
   // Render the page
   return (
-    <div>
+    <div className={`${utilStyles.card}`}>
       <Head>
         <title>{projectData.title}</title>
       </Head>
@@ -28,9 +27,7 @@ export default function Page({
         <h1 className={utilStyles.headingXl}>{projectData.title}</h1>
         <div className={utilStyles.lightText}>
         </div>
-        <div>
-          {HtmlCompiler(projectData.contentHtml)}
-        </div>
+        <ReactMarkdown className={utilStyles.markdown}>{projectData.content}</ReactMarkdown>
       </article>
     </div>
   )

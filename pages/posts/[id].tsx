@@ -7,13 +7,12 @@ import Layout from '../../components/layout'
 import utilStyles from '../../styles/utils.module.sass'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import ReactMarkdown from 'react-markdown'
-import { HtmlCompiler } from '../../lib/helperFunctions'
 
 interface postProps {
   postData: {
     title: string
     date: string
-    contentHtml: string
+    content: string
   }
 }
 
@@ -22,7 +21,7 @@ export default function Page({
  }: postProps) {
   // Render the page
   return (
-    <div>
+    <div className={`${utilStyles.card}`}>
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -31,9 +30,7 @@ export default function Page({
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div>
-          {HtmlCompiler(postData.contentHtml)}
-        </div>
+        <ReactMarkdown className={utilStyles.markdown}>{postData.content}</ReactMarkdown>
       </article>
     </div>
   )
