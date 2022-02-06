@@ -1,6 +1,6 @@
 ---
 title: 'My Gallery'
-order: '2'
+order: '3'
 tags: ['html', 'css']
 coverImage: 'https://raw.githubusercontent.com/eggwaffle/My-Gallery/main/screenshot.png'
 demo: 'https://responsive-web-dev-challenges.web.app/mygallery/'
@@ -8,7 +8,7 @@ code: 'https://github.com/eggwaffle/My-Gallery'
 feedback: 'https://devchallenges.io/solutions/wsruj7yPT4dy9AOQL4LF'
 ---
 
-Challenge: Create a recipe page [following the design](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I). The page should be responsive.
+Challenge: Create a recipe page [following the given design](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I). The page should be responsive.
 
 ![screenshot](https://raw.githubusercontent.com/eggwaffle/My-Gallery/main/screenshot.png)
 

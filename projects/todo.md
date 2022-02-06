@@ -1,30 +1,30 @@
 ---
-title: 'Random quote generator'
-order: '1'
-tags: ['react', 'typescript']
-coverImage: 'https://raw.githubusercontent.com/eggwaffle/Quote-Generator/main/screenshot.png'
-demo: 'https://quote-generator-eggwaffle.vercel.app/'
-code: 'https://github.com/eggwaffle/Quote-Generator'
-feedback: 'https://devchallenges.io/solutions/bzKAI66EQ9GxW3Pnqqiv'
+title: 'Todo app'
+order: '2'
+tags: ['react', 'javascript', 'sass']
+coverImage: 'https://raw.githubusercontent.com/eggwaffle/todo/main/screenshot.png'
+demo: 'https://front-end-dev-challenges.web.app/todo/'
+code: 'https://github.com/eggwaffle/todo'
+feedback: 'https://devchallenges.io/solutions/JOclulGwkSUlOfkcV8nO'
 ---
 
-Challenge: Create a quote generator app [following given designs](https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8).
+Challenge: Create a todo app [following the given design](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5). The page should be responsive.
 
-![screenshot](https://raw.githubusercontent.com/eggwaffle/Quote-Generator/main/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/eggwaffle/todo/main/screenshot.png)
 
 ## Built With
 
 - [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
 - [Sass](https://sass-lang.com/)
 - [Tailwind](https://tailwindcss.com/)
 
 ## Features
 
-- I can see a random quote
-- I generate a new random quote
-- When I select quote author, I can see a list of quotes from them
-- I can see quote genre under the author
+- I can add a new task
+- I can complete a task
+- I can toggle between All, Active and Completed
+- I can remove one or all tasks under the Completed tab
+- Store the data in local storage that when I refresh the page I can still see my progress
 
 ## How To Use
 
@@ -46,5 +46,4 @@ $ npm run dev
 - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 - [Node.js](https://nodejs.org/)
 - [W3Schools](https://www.w3schools.com/)
-- [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
 - [Marked - a markdown parser](https://github.com/chjj/marked)

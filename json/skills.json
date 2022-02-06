@@ -7,8 +7,20 @@
         "skillLevel": 0.5
       },
       {
+        "skillName": "Javascript",
+        "skillLevel": 0.6
+      },
+      {
+        "skillName": "Typescript",
+        "skillLevel": 0.3
+      },
+      {
         "skillName": "CSS",
-        "skillLevel": 0.7
+        "skillLevel": 0.8
+      },
+      {
+        "skillName": "Sass",
+        "skillLevel": 0.4
       }
     ]
   },

@@ -1,23 +1,15 @@
-import Image from 'next/image'
 import utilStyles from '../styles/utils.module.sass'
 import styles from './hobbies.module.sass'
-import Hobby from './hobby'
-
-export interface hobbyCardProps {
-  hobby: string
-  description: string
-  src: string
-  alt: string
-}
+import Hobby, {hobbyProps} from './hobby'
 
 export default function Hobbies ({
   hobbyDataset
 }: {
-  hobbyDataset: hobbyCardProps[]
+  hobbyDataset: hobbyProps[]
 }) {
   return (
     <div className={`${utilStyles.card}`}>
-      <h3>Hobbies</h3>
+      <h3 className={utilStyles.cardHeading}>Hobbies</h3>
       {hobbyDataset.map(({hobby, description, src, alt}) => (
         <Hobby
           key={hobby}

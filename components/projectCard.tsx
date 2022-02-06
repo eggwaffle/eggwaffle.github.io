@@ -43,7 +43,7 @@ const ProjectCard = ({
           />
       </div>
       <div className={styles.ProjectContainer}>
-        <div>
+        <div className={utilStyles.tagList}>
           {tags.map(tag => (
             <small key={tag} className={utilStyles.lightText}>#{tag}</small>
           ))}
@@ -59,15 +59,24 @@ const ProjectCard = ({
             <small>Read more</small>
           </a>
         </Link>
-        <div className={styles.projectLinkDrawer}>
-          <a href={demo}>
+        <div className={utilStyles.projectLinkDrawer}>
+          <a
+            className={utilStyles.demoButton}
+            href={demo}
+          >
             Demo
           </a>
-          <a href={code}>
+          <a
+            className={utilStyles.codeButton}
+            href={code}
+          >
             Code
           </a>
-          <a href={feedback}>
-            Feedback
+          <a
+            className={utilStyles.commentButton}
+            href={feedback}
+          >
+            Find me
           </a>
         </div>
       </div>

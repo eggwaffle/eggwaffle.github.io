@@ -6,6 +6,38 @@
   @apply m-2 p-6 bg-white rounded-xl
 
 
+.cardHeading
+  @apply uppercase
+
+
+.markdown
+  @apply w-full
+  h2
+    @apply break-words text-lg
+  img
+    @apply w-full rounded-xl
+  a
+    @apply italic hover:text-A9A9A9
+  pre
+    @apply p-2 bg-1e293b overflow-x-auto
+    code
+      @apply font-ubuntu-mono text-F8FAFC text-sm
+
+
+.infoBar
+  @apply flex flex-col lg:flex-row lg:justify-between lg:items-center
+  div
+    @apply lg:w-[40%]
+
+
+.tagList
+  @apply py-2 flex gap-2
+
+
+.lightText
+  @apply text-555555
+
+
 .postCard
   @apply flex flex-col md:flex-row gap-4 items-center
 
@@ -14,65 +46,19 @@
   @apply text-2xl font-medium
 
 
-.markdown
-  @apply w-full
-  img
-    @apply w-full
+.projectLinkDrawer
+  @apply flex justify-around py-2
   a
-    @apply hover:text-A9A9A9
-  pre
-    @apply p-2 bg-1e293b overflow-x-auto
-    code
-      @apply font-ubuntu-mono text-F8FAFC text-sm
-
-.heading2Xl
-  font-size: 2.5rem
-  line-height: 1.2
-  font-weight: 800
-  letter-spacing: -0.05rem
-  margin: 1rem 0
+    @apply text-sm md:text-base
 
 
-.headingXl
-  font-size: 2rem
-  line-height: 1.3
-  font-weight: 800
-  letter-spacing: -0.05rem
-  margin: 1rem 0
+.demoButton
+  @apply w-[30%] py-3 rounded-xl text-center bg-2F80ED text-white hover:bg-0070f3
 
 
-.headingLg
-  font-size: 1.5rem
-  line-height: 1.4
-  margin: 1rem 0
+.codeButton
+  @apply w-[30%] py-3 rounded-xl text-center border border-solid border-2F80ED text-2F80ED hover:bg-F2F2F2
 
 
-.headingMd
-  font-size: 1.2rem
-  line-height: 1.5
-
-
-.borderCircle
-  border-radius: 9999px
-
-
-.colorInherit
-  color: inherit
-
-
-.padding1px
-  padding-top: 1px
-
-
-.list
-  list-style: none
-  padding: 0
-  margin: 0
-
-
-.listItem
-  margin: 0 0 1.25rem
-
-
-.lightText
-  @apply text-555555
+.commentButton
+  @apply w-[30%] py-3 rounded-xl text-center bg-F0402C text-white hover:bg-EB5757

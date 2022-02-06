@@ -22,22 +22,33 @@ const ProjectPage = ({
         <title>{projectData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{projectData.title}</h1>
-        <div className={utilStyles.lightText}>
-          {projectData.tags.map(tag => (
-            <small key={tag} className={utilStyles.lightText}>#{tag}</small>
-          ))}
-        </div>
-        <div className={utilStyles.projectLinkDrawer}>
-          <a href={projectData.demo}>
-            Demo
-          </a>
-          <a href={projectData.code}>
-            Code
-          </a>
-          <a href={projectData.feedback}>
-            Feedback
-          </a>
+        <h1>{projectData.title}</h1>
+        <div className={utilStyles.infoBar}>
+          <div className={utilStyles.tagList}>
+            {projectData.tags.map(tag => (
+              <small key={tag} className={utilStyles.lightText}>#{tag}</small>
+            ))}
+          </div>
+          <div className={utilStyles.projectLinkDrawer}>
+            <a
+              className={utilStyles.demoButton}
+              href={projectData.demo}
+            >
+              Demo
+            </a>
+            <a
+              className={utilStyles.codeButton}
+              href={projectData.code}
+            >
+              Code
+            </a>
+            <a
+              className={utilStyles.commentButton}
+              href={projectData.feedback}
+            >
+              Find me
+            </a>
+          </div>
         </div>
         <ReactMarkdown
           className={utilStyles.markdown}

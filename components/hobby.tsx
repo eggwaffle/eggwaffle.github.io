@@ -1,21 +1,21 @@
 import Image from 'next/image'
-import type { ReactElement } from 'react'
 import utilStyles from '../styles/utils.module.sass'
 import styles from './hobby.module.sass'
 
-interface hobbyProps {
+export interface hobbyProps {
   hobby: string
   description: string
   src: string
   alt: string
 }
 
-const Hobby: React.FC<hobbyProps> = ({
+const Hobby = ({
   hobby,
   description,
   src,
   alt,
-}) => {
+}: hobbyProps
+) => {
   return (
     <div className={styles.hobby} key={hobby}>
       <div className={styles.hobbyImageContainer}>

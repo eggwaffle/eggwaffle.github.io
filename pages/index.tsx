@@ -1,15 +1,12 @@
-import Date from '../components/date'
-import Head from 'next/head'
-import Link from 'next/link'
-import type { ReactElement } from 'react'
-import { getLayout as getSiteLayout, siteTitle } from '../components/siteLayout'
+import { getLayout as getSiteLayout} from '../components/siteLayout'
 import utilStyles from '../styles/utils.module.sass'
 import { getSortedPostsData } from '../lib/posts'
 import { getSortedProjectsData } from '../lib/projects'
 import { GetStaticProps } from 'next'
 import Profile from '../components/profile'
-import Skills from '../components/skills'
-import Hobbies, { hobbyCardProps } from '../components/hobbies'
+import Skills, { skillProps } from '../components/skills'
+import Hobbies from '../components/hobbies'
+import {hobbyProps} from '../components/hobby'
 import PostCard, { PostProps } from '../components/postCard'
 import ProjectCard, { ProjectProps } from '../components/projectCard'
 import skillDataset from '../json/skills.json'
@@ -24,11 +21,8 @@ export default function Page( {
 }: {
   allPostsData: PostProps[],
   allProjectsData: ProjectProps[],
-  skillData: {
-    skillsCategory: string
-    skills: []
-  }[],
-  hobbyData: hobbyCardProps[]
+  skillData: skillProps[],
+  hobbyData: hobbyProps[]
 }) {
   return (
     <>
@@ -42,46 +36,38 @@ export default function Page( {
               skills={skills}
             />
           ))}
-            <Hobbies
-              hobbyDataset={hobbyData}
-            />
+          <Hobbies
+            hobbyDataset={hobbyData}
+          />
         </section>
         <section>
-          <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-            <h3 className={utilStyles.card}>Blog ({allPostsData.length})</h3>
-            <ul className={utilStyles.list}>
-              {allPostsData.map(({ id, title, date, coverImage, excerpt, content}) => (
-                <PostCard
-                  key={id}
-                  id={id}
-                  title={title}
-                  date={date}
-                  coverImage={coverImage}
-                  excerpt={excerpt}
-                  content={content}
-                />
-              ))}
-            </ul>
-          </section>
-          <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-            <h3 className={utilStyles.card}>Projects ({allProjectsData.length})</h3>
-            <ul className={utilStyles.list}>
-              {allProjectsData.map(({ id, title, tags, coverImage, excerpt, demo, code, feedback, content }) => (
-                <ProjectCard
-                key={id}
-                id={id}
-                title={title}
-                tags={tags}
-                coverImage={coverImage}
-                excerpt={excerpt}
-                demo={demo}
-                code={code}
-                feedback={feedback}
-                content={content}
-                />
-              ))}
-            </ul>
-          </section>
+          <h3 className={`${utilStyles.card} ${utilStyles.cardHeading}`}>Blog ({allPostsData.length})</h3>
+          {allPostsData.map(({ id, title, date, coverImage, excerpt, content}) => (
+            <PostCard
+              key={id}
+              id={id}
+              title={title}
+              date={date}
+              coverImage={coverImage}
+              excerpt={excerpt}
+              content={content}
+            />
+          ))}
+          <h3 className={`${utilStyles.card} ${utilStyles.cardHeading}`}>Projects ({allProjectsData.length})</h3>
+          {allProjectsData.map(({ id, title, tags, coverImage, excerpt, demo, code, feedback, content }) => (
+            <ProjectCard
+            key={id}
+            id={id}
+            title={title}
+            tags={tags}
+            coverImage={coverImage}
+            excerpt={excerpt}
+            demo={demo}
+            code={code}
+            feedback={feedback}
+            content={content}
+            />
+          ))}
         </section>
       </section>
     </>
