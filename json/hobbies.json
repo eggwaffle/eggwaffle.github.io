@@ -1,0 +1,20 @@
+[
+  {
+    "hobby":"Gaming",
+    "description":"My favourite genres are RPG, simulation and strategy",
+    "src":"https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf",
+    "alt":"A gamepad"
+  },
+  {
+    "hobby":"Swimming",
+    "description":"I can swim 50m non-stop",
+    "src":"https://images.unsplash.com/photo-1591285713698-598d587de63e",
+    "alt":"A swimming pool"
+  },
+  {
+    "hobby":"Reading",
+    "description":"I read pretty fast",
+    "src":"https://images.unsplash.com/photo-1491309055486-24ae511c15c7",
+    "alt":"Reading a book"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "skillsCategory": "front end",
+    "skills":[
+      {
+        "skillName": "React",
+        "skillLevel": 0.5
+      },
+      {
+        "skillName": "CSS",
+        "skillLevel": 0.7
+      }
+    ]
+  },
+  {
+    "skillsCategory": "design",
+    "skills":[
+      {
+        "skillName": "Figma",
+        "skillLevel": 0.65
+      },
+      {
+        "skillName": "Inkscape",
+        "skillLevel": 0.25
+      }
+    ]
+  }
+]

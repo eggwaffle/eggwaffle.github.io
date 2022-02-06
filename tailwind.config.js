@@ -25,6 +25,7 @@ module.exports = {
         '828282': '#828282',
         'A9A9A9': '#A9A9A9',
         'BDBDBD': '#BDBDBD',
+        'C4C4C4': '#C4C4C4',
         'F2F2F2': '#F2F2F2',
         'EB5757': '#EB5757',
       },

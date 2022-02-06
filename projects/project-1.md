@@ -2,7 +2,7 @@
 title: 'My Gallery'
 order: '1'
 tags: ['html', 'css']
-coverImage: 'https://eggwaffle.github.io/images/my-gallery.png'
+coverImage: 'https://raw.githubusercontent.com/eggwaffle/My-Gallery/main/screenshot.png'
 ---
 
 Challenge: Create a recipe page [following the design](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I). The page should be responsive.

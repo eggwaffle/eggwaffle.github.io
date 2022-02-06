@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from 'querystring';
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 import type { ReactElement } from 'react'
-import Layout from '../../components/layout'
+import { getLayout } from '../../components/postPageLayout'
 import utilStyles from '../../styles/utils.module.sass'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import ReactMarkdown from 'react-markdown'
@@ -36,13 +36,7 @@ export default function Page({
   )
 }
 
-Page.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <Layout>
-      {page}
-    </Layout>
-  )
-}
+Page.getLayout = getLayout
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Return a list of possible value for id

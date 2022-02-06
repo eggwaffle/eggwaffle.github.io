@@ -17,7 +17,7 @@ const Hobby: React.FC<hobbyProps> = ({
   alt,
 }) => {
   return (
-    <div className="" key={hobby}>
+    <div className={styles.hobby} key={hobby}>
       <div className={styles.hobbyImageContainer}>
         <Image
           priority
