@@ -8,6 +8,12 @@ import Footer from './footer'
 
 export const siteTitle = 'Egg Waffle'
 
+export const getLayout = (page: ReactElement) => (
+  <SiteLayout>
+    {page}
+  </SiteLayout>
+)
+
 export default function SiteLayout({
   children
  }: {
@@ -37,13 +43,7 @@ export default function SiteLayout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main>{children}</main>
-      <Footer  />
+      <Footer />
     </div>
   )
 }
-
-export const getLayout = (page: ReactElement) => (
-  <SiteLayout>
-    {page}
-  </SiteLayout>
-)

@@ -1,10 +1,8 @@
-import { remark } from 'remark'
-import html from 'remark-html'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-export function getData(directory) {
+export function getData(directory: string) {
   // Get file names under /directory
   const fileNames = fs.readdirSync(directory)
   const allPostsData = fileNames.map(fileName => {
@@ -16,21 +14,28 @@ export function getData(directory) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
     // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents, { excerpt: firstTwoLines })
+    const option:{} = { excerpt: firstTwoLines }
+    const matterResult= matter(fileContents, option)
+
     // Combine the data with the id
     return {
       id,
-      ...matterResult.data,
+      ...(matterResult.data as { date: string; order:number; title: string }),
       excerpt: matterResult.excerpt,
     }
   })
   return allPostsData
 }
 // returns the first 4 lines of the contents
-function firstTwoLines(file, options) {
+function firstTwoLines(file: {
+  id: string
+  content: string
+  excerpt: string
+}
+  ) {
   file.excerpt = `${file.content.split('\n').slice(0, 2).join(' ')} ...`
 }
-export function getAllIds(directory) {
+export function getAllIds(directory: string) {
   const fileNames = fs.readdirSync(directory)
 
   // Returns an array that looks like this:
@@ -59,23 +64,17 @@ export function getAllIds(directory) {
 }
 //We added the async keyword to getPostData because we need to use await for remark.
 //async/await allow you to fetch data asynchronously.
-export async function getDataById(id, directory) {
+export async function getDataById(id:string, directory:string) {
   const fullPath = path.join(directory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)
-  /*
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content)
-  const contentHtml = processedContent.toString()
-  */
+
   // Combine the data with the id and contentHtml
   return {
     id,
+    ...matterResult.data,
     content: matterResult.content,
-    ...matterResult.data
   }
 }

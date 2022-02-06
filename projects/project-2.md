@@ -1,32 +1,28 @@
 ---
-title: 'Random quote generator'
+title: 'My Gallery'
 order: '2'
-tags: ['#react', '#Typescript']
-coverImage: 'https://raw.githubusercontent.com/eggwaffle/Quote-Generator/main/screenshot.png'
+tags: ['html', 'css']
+coverImage: 'https://raw.githubusercontent.com/eggwaffle/My-Gallery/main/screenshot.png'
+demo: 'https://responsive-web-dev-challenges.web.app/mygallery/'
+code: 'https://github.com/eggwaffle/My-Gallery'
+feedback: 'https://devchallenges.io/solutions/wsruj7yPT4dy9AOQL4LF'
 ---
 
-Challenge: Create a quote generator app [following given designs](https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8).
+Challenge: Create a recipe page [following the design](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I). The page should be responsive.
 
-![screenshot](/images/quote-generator.png)
+![screenshot](https://raw.githubusercontent.com/eggwaffle/My-Gallery/main/screenshot.png)
 
 ## Built With
 
-- [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
-- [Sass](https://sass-lang.com/)
-- [Tailwind](https://tailwindcss.com/)
+- [HTML](https://html.spec.whatwg.org/)
+- [CSS](https://www.w3.org/TR/CSS/)
 
 ## Features
 
-- I can see a random quote
-- I generate a new random quote
-- When I select quote author, I can see a list of quotes from them
-- I can see quote genre under the author
+- I can see a page following [the given design](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I)
 
 ## Acknowledgements
 
 - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
 - [W3Schools](https://www.w3schools.com/)
-- [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
 - [Marked - a markdown parser](https://github.com/chjj/marked)

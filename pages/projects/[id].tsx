@@ -1,22 +1,20 @@
 import Head from 'next/head'
-import { ParsedUrlQuery } from 'querystring';
 import { getAllProjectIds, getProjectData } from '../../lib/projects'
-import type { ReactElement } from 'react'
 import { getLayout } from '../../components/postPageLayout'
 import utilStyles from '../../styles/utils.module.sass'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import { ProjectProps } from '../../components/projectCard'
 
-interface projectProps {
-  projectData: {
-    title: string
-    content: string
-  }
+interface projectPageProps {
+  projectData: ProjectProps
 }
 
-export default function Page({
+const ProjectPage = ({
   projectData
- }: projectProps) {
+}: projectPageProps
+ ) => {
   // Render the page
   return (
     <div className={`${utilStyles.card}`}>
@@ -26,14 +24,32 @@ export default function Page({
       <article>
         <h1 className={utilStyles.headingXl}>{projectData.title}</h1>
         <div className={utilStyles.lightText}>
+          {projectData.tags.map(tag => (
+            <small key={tag} className={utilStyles.lightText}>#{tag}</small>
+          ))}
         </div>
-        <ReactMarkdown className={utilStyles.markdown}>{projectData.content}</ReactMarkdown>
+        <div className={utilStyles.projectLinkDrawer}>
+          <a href={projectData.demo}>
+            Demo
+          </a>
+          <a href={projectData.code}>
+            Code
+          </a>
+          <a href={projectData.feedback}>
+            Feedback
+          </a>
+        </div>
+        <ReactMarkdown
+          className={utilStyles.markdown}
+          remarkPlugins={[remarkGfm]}
+        >{projectData.content}</ReactMarkdown>
       </article>
     </div>
   )
 }
 
-Page.getLayout = getLayout
+export default ProjectPage
+ProjectPage.getLayout = getLayout
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Return a list of possible value for id

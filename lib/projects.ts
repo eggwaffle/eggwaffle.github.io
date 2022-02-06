@@ -21,6 +21,6 @@ export function getAllProjectIds() {
   return getAllIds(projectsDirectory)
 }
 
-export function getProjectData(id) {
+export function getProjectData(id:string) {
   return getDataById(id, projectsDirectory)
 }

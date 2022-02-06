@@ -8,17 +8,17 @@ export interface hobbyCardProps {
   description: string
   src: string
   alt: string
-}[]
+}
 
-const Hobbies: React.FC<hobbyCardProps> = ({
-  hobbyData
+export default function Hobbies ({
+  hobbyDataset
 }: {
-  hobbyData: hobbyCardProps
-}) => {
+  hobbyDataset: hobbyCardProps[]
+}) {
   return (
     <div className={`${utilStyles.card}`}>
       <h3>Hobbies</h3>
-      {hobbyData.map(({hobby, description, src, alt}) => (
+      {hobbyDataset.map(({hobby, description, src, alt}) => (
         <Hobby
           key={hobby}
           hobby={hobby}
@@ -30,5 +30,3 @@ const Hobbies: React.FC<hobbyCardProps> = ({
     </div>
   )
 }
-
-export default Hobbies

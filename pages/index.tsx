@@ -2,16 +2,16 @@ import Date from '../components/date'
 import Head from 'next/head'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
-import { getLayout as getSiteLayout } from '../components/siteLayout'
+import { getLayout as getSiteLayout, siteTitle } from '../components/siteLayout'
 import utilStyles from '../styles/utils.module.sass'
 import { getSortedPostsData } from '../lib/posts'
 import { getSortedProjectsData } from '../lib/projects'
 import { GetStaticProps } from 'next'
 import Profile from '../components/profile'
 import Skills from '../components/skills'
-import Hobbies from '../components/hobbies'
-import BlogCard from '../components/blogCard'
-import ProjectCard from '../components/projectCard'
+import Hobbies, { hobbyCardProps } from '../components/hobbies'
+import PostCard, { PostProps } from '../components/postCard'
+import ProjectCard, { ProjectProps } from '../components/projectCard'
 import skillDataset from '../json/skills.json'
 import hobbyDataset from '../json/hobbies.json'
 
@@ -22,30 +22,13 @@ export default function Page( {
   skillData,
   hobbyData
 }: {
-  allPostsData: {
-    date: string
-    title: string
-    id: string
-    coverImage: string
-    excerpt: string
-  }[],
-  allProjectsData: {
-    title: string
-    id: string
-    tags: string[]
-    coverImage: string
-    excerpt: string
-  }[],
+  allPostsData: PostProps[],
+  allProjectsData: ProjectProps[],
   skillData: {
     skillsCategory: string
     skills: []
   }[],
-  hobbyData: {
-    hobby: string
-    description: string
-    src: string
-    alt: string
-  }[]
+  hobbyData: hobbyCardProps[]
 }) {
   return (
     <>
@@ -60,21 +43,22 @@ export default function Page( {
             />
           ))}
             <Hobbies
-              hobbyData={hobbyData}
+              hobbyDataset={hobbyData}
             />
         </section>
         <section>
           <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <h3 className={utilStyles.card}>Blog ({allPostsData.length})</h3>
             <ul className={utilStyles.list}>
-              {allPostsData.map(({ id, title, date, coverImage, excerpt}) => (
-                <BlogCard
+              {allPostsData.map(({ id, title, date, coverImage, excerpt, content}) => (
+                <PostCard
                   key={id}
                   id={id}
                   title={title}
                   date={date}
                   coverImage={coverImage}
                   excerpt={excerpt}
+                  content={content}
                 />
               ))}
             </ul>
@@ -82,7 +66,7 @@ export default function Page( {
           <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <h3 className={utilStyles.card}>Projects ({allProjectsData.length})</h3>
             <ul className={utilStyles.list}>
-              {allProjectsData.map(({ id, title, tags, coverImage, excerpt }) => (
+              {allProjectsData.map(({ id, title, tags, coverImage, excerpt, demo, code, feedback, content }) => (
                 <ProjectCard
                 key={id}
                 id={id}
@@ -90,6 +74,10 @@ export default function Page( {
                 tags={tags}
                 coverImage={coverImage}
                 excerpt={excerpt}
+                demo={demo}
+                code={code}
+                feedback={feedback}
+                content={content}
                 />
               ))}
             </ul>

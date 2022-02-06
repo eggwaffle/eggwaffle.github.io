@@ -12,16 +12,19 @@ module.exports = {
       'montserrat' : ['Montserrat', 'sans-serif'],
       'raleway' : ['Raleway', 'sans-serif'],
       'tutorial': ['-apple-system','BlinkMacSystemFont','"Segoe UI"','Roboto','Oxygen','Ubuntu','Cantarell',
-        '"Fira Sans"','"Droid Sans"','"Helvetica Neue"','sans-serif']
+        '"Fira Sans"','"Droid Sans"','"Helvetica Neue"','sans-serif'],
+      'ubuntu-mono': ['"Ubuntu Mono"', 'monospace']
     },
     extend: {
       colors: {
         '0070f3': '#0070f3',
+        '1e293b': '#1e293b',
         '2F80ED': '#2F80ED',
         '333333': '#333333',
         '4F4F4F': '#4F4F4F',
         '555555': '#555555',
         'F7DF94': '#F7DF94',
+        'F8FAFC': '#F8FAFC',
         '828282': '#828282',
         'A9A9A9': '#A9A9A9',
         'BDBDBD': '#BDBDBD',

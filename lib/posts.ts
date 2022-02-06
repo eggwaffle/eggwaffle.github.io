@@ -21,6 +21,6 @@ export function getAllPostIds() {
   return getAllIds(postsDirectory)
 }
 
-export function getPostData(id) {
+export function getPostData(id: string) {
   return getDataById(id, postsDirectory)
 }

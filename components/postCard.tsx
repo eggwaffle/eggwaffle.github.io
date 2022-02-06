@@ -1,19 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import ReactMarkdown from "react-markdown";
+import remarkGfm from 'remark-gfm'
 import Date from './date'
-import styles from './blogCard.module.sass'
+import styles from './postCard.module.sass'
 import utilStyles from '../styles/utils.module.sass'
 
-export interface BlogCardProps {
+export interface PostProps {
   id: string
   title: string
   date: string
   coverImage: string
   excerpt: string
+  content: string
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({
+const PostCard: React.FC<PostProps> = ({
   id,
   title,
   date,
@@ -22,7 +24,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   return (
     <div className={`${utilStyles.card} ${utilStyles.postCard}`} key={id}>
-      <div className={styles.blogContainer}>
+      <div className={styles.postContainer}>
         <small className={utilStyles.lightText}>
           Blog
         </small>
@@ -34,18 +36,18 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <small className={utilStyles.lightText}>
           <Date dateString={date} />
         </small>
-        <ReactMarkdown>{excerpt}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{excerpt}</ReactMarkdown>
         <Link href={`/posts/${id}`}>
           <a>
             <small>Read more</small>
           </a>
         </Link>
       </div>
-      <div className={styles.blogImageContainer}>
+      <div className={styles.postImageContainer}>
         <Image
             priority
             src={coverImage}
-            className={styles.blogPic}
+            className={styles.postPic}
             height={800}
             width={800}
             alt={title}
@@ -56,4 +58,4 @@ const BlogCard: React.FC<BlogCardProps> = ({
     </div>
 )}
 
-export default BlogCard;
+export default PostCard;

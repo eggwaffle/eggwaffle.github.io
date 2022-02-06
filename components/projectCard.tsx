@@ -1,24 +1,33 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import ReactMarkdown from "react-markdown";
-import styles from './blogCard.module.sass'
+import remarkGfm from 'remark-gfm'
+import styles from './projectCard.module.sass'
 import utilStyles from '../styles/utils.module.sass'
 
-export interface ProjectCardProps {
+export interface ProjectProps {
   id: string
   title: string
   tags: string[]
   coverImage: string
   excerpt: string
+  demo: string
+  code: string
+  feedback: string
+  content: string
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard = ({
   id,
   title,
   tags,
   coverImage,
-  excerpt
-}) => {
+  excerpt,
+  demo,
+  code,
+  feedback
+}: ProjectProps
+) => {
   return (
     <div className={`${utilStyles.card} ${utilStyles.postCard}`} key={id}>
       <div className={styles.ProjectImageContainer}>
@@ -34,22 +43,33 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           />
       </div>
       <div className={styles.ProjectContainer}>
-        <small className={utilStyles.lightText}>
+        <div>
           {tags.map(tag => (
-            <small key={tag} className={utilStyles.lightText}>{tag}</small>
+            <small key={tag} className={utilStyles.lightText}>#{tag}</small>
           ))}
-        </small>
+        </div>
         <Link href={`/projects/${id}`}>
           <a>
             <h2 className={utilStyles.postTitle}>{title}</h2>
           </a>
         </Link>
-        <ReactMarkdown>{excerpt}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{excerpt}</ReactMarkdown>
         <Link href={`/projects/${id}`}>
           <a>
             <small>Read more</small>
           </a>
         </Link>
+        <div className={styles.projectLinkDrawer}>
+          <a href={demo}>
+            Demo
+          </a>
+          <a href={code}>
+            Code
+          </a>
+          <a href={feedback}>
+            Feedback
+          </a>
+        </div>
       </div>
     </div>
 )}

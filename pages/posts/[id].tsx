@@ -7,18 +7,16 @@ import { getLayout } from '../../components/postPageLayout'
 import utilStyles from '../../styles/utils.module.sass'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import { PostProps } from '../../components/postCard'
 
-interface postProps {
-  postData: {
-    title: string
-    date: string
-    content: string
-  }
+interface postPageProps {
+  postData: PostProps
 }
 
 export default function Page({
   postData
- }: postProps) {
+ }: postPageProps) {
   // Render the page
   return (
     <div className={`${utilStyles.card}`}>
@@ -30,7 +28,7 @@ export default function Page({
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <ReactMarkdown className={utilStyles.markdown}>{postData.content}</ReactMarkdown>
+        <ReactMarkdown className={utilStyles.markdown} remarkPlugins={[remarkGfm]}>{postData.content}</ReactMarkdown>
       </article>
     </div>
   )
