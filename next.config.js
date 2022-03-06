@@ -2,8 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    loader: 'imgix',
-    path: '',
+    domains: ['eggwaffle.github.io', 'images.unsplash.com', 'raw.githubusercontent.com','img.shields.io'],
+  //  loader: 'imgix',
+  //  path: '',
   },
 }
 

@@ -20,6 +20,12 @@
   </h3>
 </div>
 
+<div align="center">
+  <a href="https://war.ukraine.ua">
+    <img src="https://img.shields.io/badge/Support%20Ukraine-Now-ffd700?labelColor=0057b7" alt="Support Ukraine Badge" />
+  </a>
+</div>
+
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
