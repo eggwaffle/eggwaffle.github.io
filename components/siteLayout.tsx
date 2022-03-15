@@ -20,7 +20,7 @@ export default function SiteLayout({
     children: React.ReactNode
  }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <meta
           name="description"
@@ -42,7 +42,26 @@ export default function SiteLayout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main>{children}</main>
+      <div className={styles.banner}>
+        <div className={styles.topBanner}>
+          <h2 className={styles.bannerText}>
+            Russia has invaded Ukraine
+          </h2>
+        </div>
+        <div className={styles.bottomBanner}>
+          <a
+            href="https://war.ukraine.ua"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.bannerButton}
+          >
+            Support Ukraine
+          </a>
+        </div>
+      </div>
+      <main className={styles.container}>
+        {children}
+      </main>
       <Footer />
     </div>
   )

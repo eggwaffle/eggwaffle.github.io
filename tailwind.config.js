@@ -17,6 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        '0057B7': '#0057B7',
         '0070f3': '#0070f3',
         '1e293b': '#1e293b',
         '2F80ED': '#2F80ED',
@@ -31,6 +32,7 @@ module.exports = {
         'BDBDBD': '#BDBDBD',
         'C4C4C4': '#C4C4C4',
         'F2F2F2': '#F2F2F2',
+        'FFD700': '#FFD700',
         'EB5757': '#EB5757',
       },
     }

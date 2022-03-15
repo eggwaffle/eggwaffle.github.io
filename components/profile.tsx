@@ -53,15 +53,6 @@ export default function profile() {
           <p>
             Self-motivated developer, who is willing to learn and create outstanding web applications.
           </p>
-          <a href="https://war.ukraine.ua">
-          <Image
-                    priority
-                    src="https://img.shields.io/badge/Support%20Ukraine-Now-ffd700?labelColor=0057b7"
-                    height={16}
-                    width={120}
-                    alt="devChallenges"
-                  />
-          </a>
         </div>
       </div>
     </div>
