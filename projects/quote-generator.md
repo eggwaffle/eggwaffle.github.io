@@ -1,9 +1,9 @@
 ---
 title: 'Random quote generator'
-order: '1'
+order: '2'
 tags: ['react', 'typescript', 'sass']
 coverImage: 'https://raw.githubusercontent.com/eggwaffle/Quote-Generator/main/screenshot.png'
-demo: 'https://quote-generator-eggwaffle.vercel.app/'
+demo: 'https://quote-generator-eggwaffle.vercel.app'
 code: 'https://github.com/eggwaffle/Quote-Generator'
 feedback: 'https://devchallenges.io/solutions/bzKAI66EQ9GxW3Pnqqiv'
 ---

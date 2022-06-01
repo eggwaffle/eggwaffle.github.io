@@ -1,9 +1,9 @@
 ---
 title: 'My Gallery'
-order: '3'
+order: '4'
 tags: ['html', 'css']
 coverImage: 'https://raw.githubusercontent.com/eggwaffle/My-Gallery/main/screenshot.png'
-demo: 'https://responsive-web-dev-challenges.web.app/mygallery/'
+demo: 'https://responsive-web-dev-challenges.web.app/mygallery'
 code: 'https://github.com/eggwaffle/My-Gallery'
 feedback: 'https://devchallenges.io/solutions/wsruj7yPT4dy9AOQL4LF'
 ---

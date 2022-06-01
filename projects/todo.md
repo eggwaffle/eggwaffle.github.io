@@ -1,9 +1,9 @@
 ---
 title: 'Todo app'
-order: '2'
+order: '3'
 tags: ['react', 'javascript', 'sass']
 coverImage: 'https://raw.githubusercontent.com/eggwaffle/todo/main/screenshot.png'
-demo: 'https://front-end-dev-challenges.web.app/todo/'
+demo: 'https://front-end-dev-challenges.web.app/todo'
 code: 'https://github.com/eggwaffle/todo'
 feedback: 'https://devchallenges.io/solutions/JOclulGwkSUlOfkcV8nO'
 ---
